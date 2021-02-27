@@ -20,6 +20,7 @@ public class DialogController : MonoBehaviour
     private int _index;
     [SerializeField]
     private float _typingDelay = 0.05f;
+    public bool finished = false;
 
 
     private void Awake() 
@@ -34,7 +35,7 @@ public class DialogController : MonoBehaviour
 
     private void Update() {
         // Check if current text displayed is complete
-        if (_textDisplay.text == sentences[_index])
+        if (_textDisplay.text.Length == sentences[_index].Length && !finished) 
         {
             continueBtn.SetActive(true);
         }
@@ -46,7 +47,14 @@ public class DialogController : MonoBehaviour
         foreach(char letter in sentences[_index].ToCharArray())
         {
             yield return new WaitForSeconds(_typingDelay);
-            _textDisplay.text += letter;
+            if (letter == '-')
+            {
+                _textDisplay.text += "\n";
+            } else 
+            {
+                _textDisplay.text += letter;
+            }
+            
             _audioSource.Play();
             
         }
@@ -70,6 +78,7 @@ public class DialogController : MonoBehaviour
         } else 
         {
             _textDisplay.text = "";
+            finished = true;
         }
     }
 
