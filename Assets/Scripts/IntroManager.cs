@@ -15,6 +15,7 @@ public class IntroManager : MonoBehaviour
 
     // General vars
     private float _dialogDelay = 1f;
+    public AudioController backgroundMusic;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,12 @@ public class IntroManager : MonoBehaviour
             // Start dialog 3
             dialog3.transform.parent.gameObject.SetActive(true);
             StartCoroutine(StartDialog(dialog3));
+        }
+
+        if (dialog3.GetComponent<DialogController>().finished)
+        {
+            // Fade out the music
+            backgroundMusic.fadeIn = false;
         }
 
 

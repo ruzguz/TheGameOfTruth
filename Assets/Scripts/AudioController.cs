@@ -42,7 +42,7 @@ public class AudioController : MonoBehaviour
 
     }
 
-    public void FadeIn()
+    private void FadeIn()
     {
         if (_audioSource.volume < _max)
         {
@@ -50,7 +50,7 @@ public class AudioController : MonoBehaviour
         }
     }
 
-    public void FadeOut()
+    private void FadeOut()
     {
         if (_audioSource.volume > _min) 
         {
