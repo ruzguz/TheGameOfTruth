@@ -12,6 +12,9 @@ public class DialogController : MonoBehaviour
     private TextMeshProUGUI _textDisplay;
     public GameObject continueBtn;
 
+    // Components vars
+    private AudioSource _audioSource;
+
     // General vars
     public string[] sentences;
     private int _index;
@@ -19,8 +22,14 @@ public class DialogController : MonoBehaviour
     private float _typingDelay = 0.05f;
 
 
+    private void Awake() 
+    {
+        _audioSource = GetComponent<AudioSource>();
+        _textDisplay = GetComponent<TextMeshProUGUI>();  
+    }
+
     private void Start() {
-        _textDisplay = GetComponent<TextMeshProUGUI>();     
+           
     }
 
     private void Update() {
@@ -38,6 +47,7 @@ public class DialogController : MonoBehaviour
         {
             yield return new WaitForSeconds(_typingDelay);
             _textDisplay.text += letter;
+            _audioSource.Play();
             
         }
     }
