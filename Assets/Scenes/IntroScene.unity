@@ -248,6 +248,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6763854507584608328, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
+      propertyPath: m_text
+      value: Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507584608328, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507584608328, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
       propertyPath: m_fontColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -261,10 +271,76 @@ PrefabInstance:
       propertyPath: m_fontColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6763854507584608328, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: aa1ddbd1080aa48dcbc12599f6c364b8, type: 2}
+    - target: {fileID: 6763854507584608328, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_overrideHtmlColors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507584608328, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507584608328, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_IsTextObjectScaleStatic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390116, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390116, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 514.7681
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390116, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390116, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -22.49998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 333.7163
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_margin.y
+      value: -52.40176
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 97c98375f3a424267b4740429aaf2680,
+        type: 2}
+    - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
@@ -284,7 +360,37 @@ PrefabInstance:
     - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 18
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: aa1ddbd1080aa48dcbc12599f6c364b8, type: 2}
+    - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390119, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6763854507740390680, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
@@ -299,14 +405,18 @@ PrefabInstance:
     - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
       propertyPath: sentences.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: 'By definition we could say, reality the state of things as they are,-rather
-        than as they are imagined to be or the things that exist in-the real world
-        right? '
+      value: 'By definition we could say, reality the state of things as they are,
+        rather than as they are imagined to be '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: or the things that exist in the real world right?
       objectReference: {fileID: 0}
     - target: {fileID: 6763854508573693824, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
@@ -438,6 +548,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6763854509054769683, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854509054769692, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50a9a2c4698c14c3d99059800eabc526, type: 3}
 --- !u!224 &187256385 stripped
@@ -516,6 +636,7 @@ MonoBehaviour:
   dialog2: {fileID: 327336242}
   dialog3: {fileID: 937957591}
   dialog2Panel: {fileID: 1187343311}
+  backgroundMusic: {fileID: 1469530118}
 --- !u!1001 &937957589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -546,14 +667,28 @@ PrefabInstance:
     - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
       propertyPath: sentences.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
       propertyPath: sentences.Array.data[0]
-      value: "But there are some people who don\u2019t perceive the world as most-of
-        us. Everyone calls them mentally ill, but for me they are only-lost, my job
-        is to go inside their minds and bring them back to-REALITY. "
+      value: "But there are some people who don\u2019t perceive the world as most
+        of us."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: Everyone calls them mentally ill, but for me they are only lost ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: sentences.Array.data[2]
+      value: 'my job is to go inside their minds and bring them back '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: sentences.Array.data[3]
+      value: to REALITY.
       objectReference: {fileID: 0}
     - target: {fileID: 6763854508573693824, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
@@ -747,7 +882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9d5677eca168944f9afb26ad53533a76, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -925,6 +1060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fadeSpeed: 1
+  fadeIn: 1
 --- !u!1 &1824131385
 GameObject:
   m_ObjectHideFlags: 0

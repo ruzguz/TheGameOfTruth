@@ -47,13 +47,9 @@ public class DialogController : MonoBehaviour
         foreach(char letter in sentences[_index].ToCharArray())
         {
             yield return new WaitForSeconds(_typingDelay);
-            if (letter == '-')
-            {
-                _textDisplay.text += "\n";
-            } else 
-            {
-                _textDisplay.text += letter;
-            }
+
+            _textDisplay.text += letter;
+
             
             _audioSource.Play();
             
