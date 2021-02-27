@@ -289,12 +289,12 @@ PrefabInstance:
     - target: {fileID: 6763854507740390680, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
       propertyPath: m_Volume
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
       propertyPath: _typingDelay
-      value: 0.02
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
@@ -523,6 +523,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1824131389}
     m_Modifications:
+    - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390117, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390680, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: _typingDelay
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
       propertyPath: sentences.Array.size
@@ -933,6 +953,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1824131389}
     m_Modifications:
+    - target: {fileID: 6763854507740390680, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: _typingDelay
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
       propertyPath: sentences.Array.size
