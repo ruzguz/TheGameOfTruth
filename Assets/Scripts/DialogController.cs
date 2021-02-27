@@ -20,8 +20,7 @@ public class DialogController : MonoBehaviour
 
 
     private void Start() {
-        _textDisplay = GetComponent<TextMeshProUGUI>();
-        StartCoroutine(Type());        
+        _textDisplay = GetComponent<TextMeshProUGUI>();     
     }
 
     private void Update() {
@@ -41,6 +40,11 @@ public class DialogController : MonoBehaviour
             _textDisplay.text += letter;
             
         }
+    }
+
+    public void StartDialog()
+    {
+        StartCoroutine(Type());
     }
 
     // Show next sentence in the dialog
