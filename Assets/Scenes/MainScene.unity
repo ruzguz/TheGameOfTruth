@@ -1193,7 +1193,30 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1460160430, guid: 6b4d0dae85744448db794e6b57148a84, type: 3}
       propertyPath: playerSpeed
-      value: 2
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460160433, guid: 6b4d0dae85744448db794e6b57148a84, type: 3}
+      propertyPath: m_LinearDrag
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460160433, guid: 6b4d0dae85744448db794e6b57148a84, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3581215818416001731, guid: 6b4d0dae85744448db794e6b57148a84,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3581215818416001731, guid: 6b4d0dae85744448db794e6b57148a84,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3581215818416001731, guid: 6b4d0dae85744448db794e6b57148a84,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3581215818416001741, guid: 6b4d0dae85744448db794e6b57148a84,
         type: 3}

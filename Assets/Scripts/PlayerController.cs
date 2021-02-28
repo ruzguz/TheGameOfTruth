@@ -9,10 +9,15 @@ public class PlayerController : MonoBehaviour
     // General vars
     public float playerSpeed = 5;
     private float _h,_v;
-    private Vector3 _moveDirection;
+    private Vector2 _moveDirection;
 
     // Components vars
+    private Rigidbody2D _playerRB;
 
+    private void Awake() 
+    {
+        _playerRB = GetComponent<Rigidbody2D>();
+    }
 
 
     // Start is called before the first frame update
@@ -24,19 +29,28 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Player movement
         _h = Input.GetAxis("Horizontal");
         _v = Input.GetAxis("Vertical");
 
         _moveDirection.x = _h;
         _moveDirection.y = _v;
+    }
 
-        transform.position += _moveDirection * Time.deltaTime * playerSpeed;
-
+    private void FixedUpdate() 
+    {
+        MovePlayer(_moveDirection);
     }
 
     // Handle collisions
     private void OnCollisionEnter2D(Collision2D other) {
 
+    }
+
+    // Player movement
+    private void MovePlayer(Vector2 direction)
+    {
+
+
+        _playerRB.AddForce(direction * playerSpeed);
     }
 }
