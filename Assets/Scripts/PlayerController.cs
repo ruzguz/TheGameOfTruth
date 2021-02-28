@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     private float _h,_v;
     private Vector3 _moveDirection;
 
-
     // Components vars
 
 
@@ -36,8 +35,8 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void Run()
-    {
-        
+    // Handle collisions
+    private void OnCollisionEnter2D(Collision2D other) {
+
     }
 }
