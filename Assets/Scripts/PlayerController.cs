@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour
 
     // Components vars
     private Rigidbody2D _playerRB;
+    private SpriteRenderer _playerSR;
 
     private void Awake() 
     {
         _playerRB = GetComponent<Rigidbody2D>();
+        _playerSR = GetComponent<SpriteRenderer>();
     }
 
 
@@ -34,6 +36,8 @@ public class PlayerController : MonoBehaviour
 
         _moveDirection.x = _h;
         _moveDirection.y = _v;
+
+
     }
 
     private void FixedUpdate() 
@@ -49,8 +53,14 @@ public class PlayerController : MonoBehaviour
     // Player movement
     private void MovePlayer(Vector2 direction)
     {
-
-
         _playerRB.AddForce(direction * playerSpeed);
+        // Flip sprite
+        if (_h > 0)
+        {
+            _playerSR.flipX = false;
+        } else if (_h < 0) 
+        {
+            _playerSR.flipX = true;
+        }
     }
 }
