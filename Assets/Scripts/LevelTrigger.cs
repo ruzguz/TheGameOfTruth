@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelTrigger : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +20,5 @@ public class LevelTrigger : MonoBehaviour
             Debug.Log("CHANGE LEVEL PLEASE");
         }
     }
-    
+
 }
