@@ -20,7 +20,7 @@ public class LevelSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //_spriteRenderer.material.color = Color.yellow;
+        
     }
 
     // Update is called once per frame
@@ -35,6 +35,7 @@ public class LevelSelection : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             _spriteRenderer.material.color = Color.yellow;
+            instructionLabelAnim.gameObject.SetActive(true);
             instructionLabelAnim.Play("instruction-label-in");
         }
     }
@@ -44,7 +45,12 @@ public class LevelSelection : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             _spriteRenderer.material.color = Color.white;
-            instructionLabelAnim.Play("instruction-label-out");
+            instructionLabelAnim.gameObject.SetActive(false);
         }    
+    }
+
+    public void ChangeLevel()
+    {
+        Debug.Log("Chaging level");
     }
 }
