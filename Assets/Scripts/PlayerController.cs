@@ -14,11 +14,13 @@ public class PlayerController : MonoBehaviour
     // Components vars
     private Rigidbody2D _playerRB;
     private SpriteRenderer _playerSR;
+    private Animator _playerAnim;
 
     private void Awake() 
     {
         _playerRB = GetComponent<Rigidbody2D>();
         _playerSR = GetComponent<SpriteRenderer>();
+        _playerAnim = GetComponent<Animator>();
     }
 
 
@@ -36,6 +38,13 @@ public class PlayerController : MonoBehaviour
 
         _moveDirection.x = _h;
         _moveDirection.y = _v;
+
+        // Detect when user make click
+        if (Input.GetMouseButtonDown(0)) 
+        {
+            Debug.Log("SHOOT");
+            _playerAnim.SetTrigger("shoot");
+        }
 
 
     }
@@ -58,9 +67,16 @@ public class PlayerController : MonoBehaviour
         if (_h > 0)
         {
             _playerSR.flipX = false;
+            _playerAnim.SetBool("isRunning", true);
         } else if (_h < 0) 
         {
             _playerSR.flipX = true;
+            _playerAnim.SetBool("isRunning", true);
+        } else 
+        {
+            _playerAnim.SetBool("isRunning", false);
         }
     }
+
+
 }
