@@ -667,7 +667,7 @@ PrefabInstance:
     - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
       propertyPath: sentences.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
@@ -689,6 +689,11 @@ PrefabInstance:
         type: 3}
       propertyPath: sentences.Array.data[3]
       value: to REALITY.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763854507740390683, guid: 50a9a2c4698c14c3d99059800eabc526,
+        type: 3}
+      propertyPath: sentences.Array.data[4]
+      value: I'll show how is a day doing my job
       objectReference: {fileID: 0}
     - target: {fileID: 6763854508573693824, guid: 50a9a2c4698c14c3d99059800eabc526,
         type: 3}
