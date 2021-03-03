@@ -16,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - GameElements
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Elements
+    uniqueID: 1865526805
     locked: 0

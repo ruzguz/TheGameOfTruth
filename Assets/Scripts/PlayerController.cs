@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     public float playerSpeed = 5;
     private float _h,_v;
     private Vector2 _moveDirection;
+    public GameObject projectile;
+    public Transform shootPoint;
+    private float offset = 45;
 
     // Components vars
     private Rigidbody2D _playerRB;
@@ -39,11 +42,16 @@ public class PlayerController : MonoBehaviour
         _moveDirection.x = _h;
         _moveDirection.y = _v;
 
+        // Calculate bullet rotation
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        float rotZ = (Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg) / 2;
+        shootPoint.rotation = Quaternion.Euler(0f,0f,rotZ -offset);
+
         // Detect when user make click
         if (Input.GetMouseButtonDown(0)) 
         {
-            Debug.Log("SHOOT");
             _playerAnim.SetTrigger("shoot");
+            Instantiate(projectile, shootPoint.position, shootPoint.rotation);
         }
 
 
