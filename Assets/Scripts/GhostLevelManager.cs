@@ -5,6 +5,9 @@ using UnityEngine;
 public class GhostLevelManager : MonoBehaviour
 {
 
+    // UI vars
+    public GameObject transitionPanel;
+
     // Level config vars
     public static GhostLevelManager sharedInstance;
     public int ghostQuantity = 10;
@@ -43,7 +46,7 @@ public class GhostLevelManager : MonoBehaviour
         if (_timer <= 0)
         {
             float randomX = Random.Range(-xLimit, xLimit);
-            float randomY = yLimit * _sign[Random.Range(1,3)];
+            float randomY = yLimit * _sign[Random.Range(1,2)];
             Vector3 randomPoint = new Vector3(randomX, randomY, 0f);
             Instantiate(ghost, randomPoint, Quaternion.identity);
             _timer = spawnTime;
@@ -55,6 +58,9 @@ public class GhostLevelManager : MonoBehaviour
         {
             // TODO: go to win scene
             Debug.Log("Win game");
+            transitionPanel.SetActive(true);
+            transitionPanel.GetComponent<Animator>().Play("panel-in");
+
         }
 
 
@@ -63,6 +69,8 @@ public class GhostLevelManager : MonoBehaviour
         {
             // TODO: go to lose scene
             Debug.Log("Lose Game");
+            transitionPanel.SetActive(true);
+            transitionPanel.GetComponent<Animator>().Play("panel-in");
         }
     }
 
