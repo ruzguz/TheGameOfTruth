@@ -1312,6 +1312,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6349744960425234432, guid: de87052ed0b32408faf030a221eb328f,
+        type: 3}
+      propertyPath: destroyEffect
+      value: 
+      objectReference: {fileID: 6877742167065804315, guid: adf9ac0710dde4c8bb2c2820a5e03111,
+        type: 3}
     - target: {fileID: 6349744960425234436, guid: de87052ed0b32408faf030a221eb328f,
         type: 3}
       propertyPath: m_Name

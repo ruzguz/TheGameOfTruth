@@ -8,6 +8,7 @@ public class GhostController : MonoBehaviour
     // General vars
     public float speed = 1;
     private GameObject _patient;
+    public GameObject destroyEffect;
 
 
     // Start is called before the first frame update
@@ -21,5 +22,14 @@ public class GhostController : MonoBehaviour
     {
         // Move to the patient
         transform.position = Vector3.MoveTowards(transform.position, _patient.transform.position, speed * Time.deltaTime);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Projectile"))
+        {
+            Instantiate(destroyEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }        
     }
 }
