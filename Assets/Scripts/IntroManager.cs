@@ -11,6 +11,7 @@ public class IntroManager : MonoBehaviour
     public TextMeshProUGUI dialog1, dialog2, dialog3;
     public GameObject dialog2Panel;
     private Animator dialog2PanelAnim;
+    public GameObject transitionPanel;
 
 
     // General vars
@@ -58,6 +59,8 @@ public class IntroManager : MonoBehaviour
         {
             // Fade out the music
             backgroundMusic.fadeIn = false;
+            transitionPanel.SetActive(true);
+            transitionPanel.GetComponent<Animator>().Play("panel-in");
         }
 
 
