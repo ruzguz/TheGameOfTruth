@@ -26,8 +26,7 @@ public class GhostPatientController : MonoBehaviour
         // Check for ghost
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Ghots reach patient :(");
-            // TODO: Damage patient
+            GhostLevelManager.sharedInstance.DamagePatient();
         }
     }
 }

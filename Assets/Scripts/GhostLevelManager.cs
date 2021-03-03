@@ -7,11 +7,9 @@ public class GhostLevelManager : MonoBehaviour
 
     // Level config vars
     public static GhostLevelManager sharedInstance;
-    [SerializeField]
-    private int _ghostQuantity = 10;
-    private int _ghostDestroyed = 0;
-    [SerializeField]
-    private int _patientLives = 3;
+    public int ghostQuantity = 10;
+    public int ghostDestroyed = 0;
+    public int patientLives = 3;
     public float spawnTime;
     private float _timer;
     public GameObject ghost;
@@ -41,7 +39,6 @@ public class GhostLevelManager : MonoBehaviour
     void Update()
     {
         // Spawn enemies
-        Debug.Log(Time.deltaTime);
         _timer -= Time.deltaTime;
         if (_timer <= 0)
         {
@@ -51,5 +48,33 @@ public class GhostLevelManager : MonoBehaviour
             Instantiate(ghost, randomPoint, Quaternion.identity);
             _timer = spawnTime;
         }
+
+
+        // Win condition
+        if(ghostDestroyed >= ghostQuantity)
+        {
+            // TODO: go to win scene
+            Debug.Log("Win game");
+        }
+
+
+        // Lose Condiiton
+        if (patientLives <= 0) 
+        {
+            // TODO: go to lose scene
+            Debug.Log("Lose Game");
+        }
     }
+
+    public void IncreaseScore()
+    {
+        ghostDestroyed++;
+    }
+
+    public void DamagePatient()
+    {
+        patientLives--;
+    }
+
+
 }
