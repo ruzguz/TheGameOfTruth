@@ -32,6 +32,12 @@ public class GhostController : MonoBehaviour
             Destroy(gameObject);
             Destroy(other.gameObject);
             GhostLevelManager.sharedInstance.IncreaseScore();
-        }        
+        }   
+
+        if (other.gameObject.CompareTag("Patient")) 
+        {
+            Instantiate(destroyEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }     
     }
 }
