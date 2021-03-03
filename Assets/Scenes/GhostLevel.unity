@@ -475,6 +475,7 @@ GameObject:
   - component: {fileID: 813521396}
   - component: {fileID: 813521397}
   - component: {fileID: 813521398}
+  - component: {fileID: 813521399}
   m_Layer: 0
   m_Name: Patient
   m_TagString: Patient
@@ -606,6 +607,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b772c7aa42ef840ffa71f41edbcabeb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &813521399
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813521393}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5caf3fe76e4df4d92ad59bdd7adc1706, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &895328936
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac86a6944b4054097ab6a151f6697828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ghostQuantity: 10
+  _ghostQuantity: 50
   _patientLives: 3
   spawnTime: 2
   ghost: {fileID: 6349744960425234436, guid: de87052ed0b32408faf030a221eb328f, type: 3}
