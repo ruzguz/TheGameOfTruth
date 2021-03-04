@@ -740,6 +740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8487014dddf46420ca82e5ea11c0335e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 30ee9d9a83325485297dd5a33e9e6fb8, type: 3}
   dialog1: {fileID: 1920506879}
   dialog2: {fileID: 327336242}
   dialog3: {fileID: 937957591}

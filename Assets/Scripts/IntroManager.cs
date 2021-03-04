@@ -8,6 +8,10 @@ public class IntroManager : MonoBehaviour
 {
 
     // UI vars
+
+    public Texture2D cursorTexture;
+    private CursorMode _cursorMode = CursorMode.Auto;
+    private Vector2 _hotSpot = Vector2.zero;
     public TextMeshProUGUI dialog1, dialog2, dialog3;
     public GameObject dialog2Panel;
     private Animator dialog2PanelAnim;
@@ -24,6 +28,7 @@ public class IntroManager : MonoBehaviour
         // Run first dialog
         StartCoroutine(StartDialog(dialog1));
         dialog2PanelAnim = dialog2Panel.GetComponent<Animator>();
+        Cursor.SetCursor(cursorTexture, _hotSpot, _cursorMode);
     }
 
     // Update is called once per frame
