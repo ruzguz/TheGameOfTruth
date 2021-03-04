@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        playerSpeed = PlayerPrefs.GetInt("playerSpeed");
     }
 
     // Update is called once per frame

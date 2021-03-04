@@ -16,6 +16,7 @@ public class GhostController : MonoBehaviour
     void Start()
     {
         _target = GameObject.Find(targetName);
+        speed = PlayerPrefs.GetInt("ghostSpeed");
     }
 
     // Update is called once per frame

@@ -64,6 +64,7 @@ public class GhostLevelManager : MonoBehaviour
         _currentBlock = Instantiate(blocks[blocksForLevel[0]], Vector3.zero, Quaternion.identity);
 
         // Set values accourding to difficulty
+        ghostQuantity = PlayerPrefs.GetInt("ghostQty");
         
 
     }

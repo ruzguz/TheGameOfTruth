@@ -15,4 +15,25 @@ public class StartingScreenController : MonoBehaviour
     {
         
     }
+
+    public void SetEasyMode()
+    {
+        PlayerPrefs.SetInt("playerSpeed", 75);
+        PlayerPrefs.SetInt("ghostSpeed", 2);
+        PlayerPrefs.SetInt("ghostQty", 10);
+    }
+
+    public void SetMediumMode()
+    {
+        PlayerPrefs.SetInt("playerSpeed", 75);
+        PlayerPrefs.SetInt("ghostSpeed", 4);
+        PlayerPrefs.SetInt("ghostQty", 12);
+    }
+
+    public void SetHardMode()
+    {
+        PlayerPrefs.SetInt("playerSpeed", 80);
+        PlayerPrefs.SetInt("ghostSpeed", 5);
+        PlayerPrefs.SetInt("ghostQty", 15);
+    }
 }
