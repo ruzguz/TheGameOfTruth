@@ -6,7 +6,8 @@ public class GhostLevelManager : MonoBehaviour
 {
 
     // UI vars
-    public GameObject transitionPanel;
+    public GameObject transitionPanelWin;
+    public GameObject transitionPanelLose;
 
     // Level config vars
     public static GhostLevelManager sharedInstance;
@@ -34,8 +35,6 @@ public class GhostLevelManager : MonoBehaviour
 
         _timer = spawnTime;
 
-        //_ghostQuantity = GameManager.sharedInstance.ghostQuantity;
-        //_patientLives = GameManager.sharedInstance.ghostLevelLives;       
     }
 
     // Update is called once per frame
@@ -58,8 +57,8 @@ public class GhostLevelManager : MonoBehaviour
         {
             // TODO: go to win scene
             Debug.Log("Win game");
-            transitionPanel.SetActive(true);
-            transitionPanel.GetComponent<Animator>().Play("panel-in");
+            transitionPanelWin.SetActive(true);
+            transitionPanelWin.GetComponent<Animator>().Play("panel-in");
 
         }
 
@@ -69,8 +68,8 @@ public class GhostLevelManager : MonoBehaviour
         {
             // TODO: go to lose scene
             Debug.Log("Lose Game");
-            transitionPanel.SetActive(true);
-            transitionPanel.GetComponent<Animator>().Play("panel-in");
+            transitionPanelLose.SetActive(true);
+            transitionPanelLose.GetComponent<Animator>().Play("panel-in");
         }
     }
 
