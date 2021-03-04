@@ -58,6 +58,8 @@ public class GhostLevelManager : MonoBehaviour
 
         // Show first block
         _currentBlock = Instantiate(blocks[blocksForLevel[0]], Vector3.zero, Quaternion.identity);
+
+        // Set values accourding to difficulty
         
 
     }
@@ -65,24 +67,10 @@ public class GhostLevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Spawn enemies
-        _timer -= Time.deltaTime;
-        if (_timer <= 0)
-        {
-            float randomX = Random.Range(-xLimit, xLimit);
-            float randomY = yLimit * _sign[Random.Range(1,2)];
-            Vector3 randomPoint = new Vector3(randomX, randomY, 0f);
-            Instantiate(ghost, randomPoint, Quaternion.identity);
-            //gInstantiate(ghost2, randomPoint, Quaternion.identity);
-            _timer = spawnTime;
-        }
-
-        Debug.Log((int)(ghostQuantity*limit2));
-
         // Transition form first block to second
         if (ghostDestroyed >= (int)(ghostQuantity*limit1) && ghostDestroyed < (int)(ghostQuantity*limit2) && _canGenerate2nd) 
         {
-            Debug.Log("Second Block");
+            //Debug.Log("Second Block");
             _currentBlock.SetActive(false);
             _currentBlock = Instantiate(blocks[blocksForLevel[1]], Vector3.zero, Quaternion.identity);
             _canGenerate2nd = false;
@@ -92,10 +80,22 @@ public class GhostLevelManager : MonoBehaviour
         // Transition from second block to third
         if (ghostDestroyed >= ghostQuantity*limit2 && _canGenerate3rd) 
         {
-            Debug.Log("Third Block");
+            //Debug.Log("Third Block");
             _currentBlock.SetActive(false);
             _currentBlock = Instantiate(blocks[blocksForLevel[2]], Vector3.zero, Quaternion.identity);
             _canGenerate3rd = false;
+
+        }
+
+        // Spawn enemies
+        _timer -= Time.deltaTime;
+        if (_timer <= 0)
+        {
+            float randomX = Random.Range(-xLimit, xLimit);
+            float randomY = yLimit * _sign[Random.Range(1,2)];
+            Vector3 randomPoint = new Vector3(randomX, randomY, 0f);
+            Instantiate(ghost, randomPoint, Quaternion.identity);
+            _timer = spawnTime;
         }
 
         // Win condition
@@ -137,6 +137,16 @@ public class GhostLevelManager : MonoBehaviour
     public void DamagePatient()
     {
         patientLives--;
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
     }
 
 
