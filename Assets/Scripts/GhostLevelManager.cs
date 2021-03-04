@@ -17,6 +17,7 @@ public class GhostLevelManager : MonoBehaviour
     public float spawnTime;
     private float _timer;
     public GameObject ghost;
+    public GameObject ghost2;
     public float xLimit;
     public float yLimit;
     private int[] _sign = new int[] {1, -1};
@@ -48,6 +49,7 @@ public class GhostLevelManager : MonoBehaviour
             float randomY = yLimit * _sign[Random.Range(1,2)];
             Vector3 randomPoint = new Vector3(randomX, randomY, 0f);
             Instantiate(ghost, randomPoint, Quaternion.identity);
+            //Instantiate(ghost2, randomPoint, Quaternion.identity);
             _timer = spawnTime;
         }
 

@@ -7,21 +7,22 @@ public class GhostController : MonoBehaviour
 
     // General vars
     public float speed = 1;
-    private GameObject _patient;
+    private GameObject _target;
+    public string targetName;
     public GameObject destroyEffect;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        _patient = GameObject.Find("Patient");
+        _target = GameObject.Find(targetName);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Move to the patient
-        transform.position = Vector3.MoveTowards(transform.position, _patient.transform.position, speed * Time.deltaTime);
+        // Move to the target
+        transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, speed * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)
