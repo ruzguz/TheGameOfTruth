@@ -5,6 +5,10 @@ using UnityEngine;
 public class GhostLevelManager : MonoBehaviour
 {
 
+    public Texture2D cursorTexture;
+    private CursorMode _cursorMode = CursorMode.Auto;
+    private Vector2 _hotSpot = Vector2.zero;
+
     // UI vars
     public GameObject transitionPanelWin;
     public GameObject transitionPanelLose;
@@ -36,6 +40,8 @@ public class GhostLevelManager : MonoBehaviour
 
         _timer = spawnTime;
 
+        Cursor.SetCursor(cursorTexture, _hotSpot, _cursorMode);
+
     }
 
     // Update is called once per frame
@@ -49,7 +55,7 @@ public class GhostLevelManager : MonoBehaviour
             float randomY = yLimit * _sign[Random.Range(1,2)];
             Vector3 randomPoint = new Vector3(randomX, randomY, 0f);
             Instantiate(ghost, randomPoint, Quaternion.identity);
-            //Instantiate(ghost2, randomPoint, Quaternion.identity);
+            //gInstantiate(ghost2, randomPoint, Quaternion.identity);
             _timer = spawnTime;
         }
 
