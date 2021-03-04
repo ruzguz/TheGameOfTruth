@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
+using TMPro;
 
 public class GhostLevelManager : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class GhostLevelManager : MonoBehaviour
     // UI vars
     public GameObject transitionPanelWin;
     public GameObject transitionPanelLose;
+    public TextMeshProUGUI patientLivesText, destroyedGhostText;
+    
 
     // Level config vars
     private bool _canGenerate2nd = true;
@@ -67,6 +71,11 @@ public class GhostLevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        // Set UI
+        patientLivesText.text = string.Format("{0}", patientLives);
+        destroyedGhostText.text = string.Format("{0}/{1}", ghostDestroyed, ghostQuantity);
+
         // Transition form first block to second
         if (ghostDestroyed >= (int)(ghostQuantity*limit1) && ghostDestroyed < (int)(ghostQuantity*limit2) && _canGenerate2nd) 
         {
