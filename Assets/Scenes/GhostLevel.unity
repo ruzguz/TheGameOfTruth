@@ -1261,6 +1261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 30ee9d9a83325485297dd5a33e9e6fb8, type: 3}
+  music: {fileID: 1220423429}
+  clinicSR: {fileID: 534910997}
   transitionPanelWin: {fileID: 1875829466}
   transitionPanelLose: {fileID: 1226702023}
   patientLivesText: {fileID: 1550504190}

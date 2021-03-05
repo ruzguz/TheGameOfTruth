@@ -11,6 +11,8 @@ public class GhostLevelManager : MonoBehaviour
     public Texture2D cursorTexture;
     private CursorMode _cursorMode = CursorMode.Auto;
     private Vector2 _hotSpot = Vector2.zero;
+    public AudioSource music;
+    public SpriteRenderer clinicSR;
 
     // UI vars
     public GameObject transitionPanelWin;
@@ -84,8 +86,11 @@ public class GhostLevelManager : MonoBehaviour
             _currentBlock.SetActive(false);
             _currentBlock = Instantiate(blocks[blocksForLevel[1]], Vector3.zero, Quaternion.identity);
             _canGenerate2nd = false;
-            
+            music.pitch += 0.2f;
+            clinicSR.color = new Color(0.5f, 0.3f, 0.6f);
         }
+
+        
 
         // Transition from second block to third
         if (ghostDestroyed >= ghostQuantity*limit2 && _canGenerate3rd) 
@@ -94,7 +99,8 @@ public class GhostLevelManager : MonoBehaviour
             _currentBlock.SetActive(false);
             _currentBlock = Instantiate(blocks[blocksForLevel[2]], Vector3.zero, Quaternion.identity);
             _canGenerate3rd = false;
-
+            music.pitch += 0.2f;
+            clinicSR.color = new Color(0.26f, 0.1f, 0.2f);
         }
 
         // Spawn enemies
@@ -158,6 +164,5 @@ public class GhostLevelManager : MonoBehaviour
     {
         Time.timeScale = 1;
     }
-
 
 }
