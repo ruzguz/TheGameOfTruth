@@ -7,7 +7,7 @@ public class StartingScreenController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -38,5 +38,11 @@ public class StartingScreenController : MonoBehaviour
         PlayerPrefs.SetInt("ghostSpeed", 6);
         PlayerPrefs.SetInt("ghostQty", 15);
         PlayerPrefs.SetInt("patientLives", 5);
+    }
+
+    public void SetFontSize(float size)
+    {
+        PlayerPrefs.SetFloat("fontSize", size);
+        GetComponent<GeneralSettings>().SetFontSize(size);
     }
 }
