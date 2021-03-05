@@ -11,8 +11,11 @@ public class ProjectileController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        limitX = GhostLevelManager.sharedInstance.xLimit;
-        limitY = GhostLevelManager.sharedInstance.yLimit;
+        if (GhostLevelManager.sharedInstance != null) 
+        {
+            limitX = GhostLevelManager.sharedInstance.xLimit;
+            limitY = GhostLevelManager.sharedInstance.yLimit;
+        }
     }
 
     // Update is called once per frame

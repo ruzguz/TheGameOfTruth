@@ -18,9 +18,10 @@ public class StartingScreenController : MonoBehaviour
 
     public void SetEasyMode()
     {
-        PlayerPrefs.SetInt("playerSpeed", 75);
+        PlayerPrefs.SetInt("playerSpeed", 70);
         PlayerPrefs.SetInt("ghostSpeed", 2);
         PlayerPrefs.SetInt("ghostQty", 10);
+        PlayerPrefs.SetInt("patientLives", 10);
     }
 
     public void SetMediumMode()
@@ -28,12 +29,14 @@ public class StartingScreenController : MonoBehaviour
         PlayerPrefs.SetInt("playerSpeed", 75);
         PlayerPrefs.SetInt("ghostSpeed", 4);
         PlayerPrefs.SetInt("ghostQty", 12);
+        PlayerPrefs.SetInt("patientLives", 8);
     }
 
     public void SetHardMode()
     {
         PlayerPrefs.SetInt("playerSpeed", 80);
-        PlayerPrefs.SetInt("ghostSpeed", 5);
+        PlayerPrefs.SetInt("ghostSpeed", 6);
         PlayerPrefs.SetInt("ghostQty", 15);
+        PlayerPrefs.SetInt("patientLives", 5);
     }
 }

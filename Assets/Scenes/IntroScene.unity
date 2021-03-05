@@ -625,9 +625,9 @@ RectTransform:
   m_Father: {fileID: 1824131389}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1031, y: 69.73988}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 278, y: 70}
   m_SizeDelta: {x: 177.07568, y: 60.167053}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &358493249
@@ -922,7 +922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8487014dddf46420ca82e5ea11c0335e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 30ee9d9a83325485297dd5a33e9e6fb8, type: 3}
+  cursorTexture: {fileID: 2800000, guid: 275c3e93d2c334b24aa35d54d019530d, type: 3}
   dialog1: {fileID: 1920506879}
   dialog2: {fileID: 327336242}
   dialog3: {fileID: 937957591}

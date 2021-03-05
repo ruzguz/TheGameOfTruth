@@ -67,6 +67,7 @@ public class GhostLevelManager : MonoBehaviour
 
         // Set values accourding to difficulty
         ghostQuantity = PlayerPrefs.GetInt("ghostQty");
+        patientLives = PlayerPrefs.GetInt("patientLives");
         
 
     }

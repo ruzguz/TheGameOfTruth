@@ -1260,7 +1260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac86a6944b4054097ab6a151f6697828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 30ee9d9a83325485297dd5a33e9e6fb8, type: 3}
+  cursorTexture: {fileID: 2800000, guid: 275c3e93d2c334b24aa35d54d019530d, type: 3}
   music: {fileID: 1220423429}
   clinicSR: {fileID: 534910997}
   transitionPanelWin: {fileID: 1875829466}
