@@ -8,9 +8,14 @@ public class IntroManager : MonoBehaviour
 {
 
     // UI vars
+
+    public Texture2D cursorTexture;
+    private CursorMode _cursorMode = CursorMode.Auto;
+    private Vector2 _hotSpot = Vector2.zero;
     public TextMeshProUGUI dialog1, dialog2, dialog3;
     public GameObject dialog2Panel;
     private Animator dialog2PanelAnim;
+    public GameObject transitionPanel;
 
 
     // General vars
@@ -23,6 +28,7 @@ public class IntroManager : MonoBehaviour
         // Run first dialog
         StartCoroutine(StartDialog(dialog1));
         dialog2PanelAnim = dialog2Panel.GetComponent<Animator>();
+        Cursor.SetCursor(cursorTexture, _hotSpot, _cursorMode);
     }
 
     // Update is called once per frame
@@ -37,7 +43,7 @@ public class IntroManager : MonoBehaviour
             // Start dialgo2
             dialog2Panel.SetActive(true);
             dialog2.transform.parent.gameObject.SetActive(true);
-            dialog2PanelAnim.Play("panel-in");
+            dialog2PanelAnim.Play("ui-panel-in");
             StartCoroutine(StartDialog(dialog2));
         }
 
@@ -46,7 +52,6 @@ public class IntroManager : MonoBehaviour
         {
             // Disable dialog 2
             dialog2.GetComponent<DialogController>().finished = false;
-            dialog2PanelAnim.Play("panel-out");
             dialog2.gameObject.SetActive(false);
             dialog2Panel.SetActive(false);
             // Start dialog 3
@@ -58,6 +63,8 @@ public class IntroManager : MonoBehaviour
         {
             // Fade out the music
             backgroundMusic.fadeIn = false;
+            transitionPanel.SetActive(true);
+            transitionPanel.GetComponent<Animator>().Play("panel-in");
         }
 
 
