@@ -6,7 +6,7 @@ public class ProjectileController : MonoBehaviour
 {
 
     public float speed;
-    public float limitX, limitY;
+    public float limitX = 20, limitY = 20;
 
     // Start is called before the first frame update
     void Start()
