@@ -18,12 +18,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _playerRB;
     private SpriteRenderer _playerSR;
     private Animator _playerAnim;
+    private AudioSource _playerAS;
 
     private void Awake() 
     {
         _playerRB = GetComponent<Rigidbody2D>();
         _playerSR = GetComponent<SpriteRenderer>();
         _playerAnim = GetComponent<Animator>();
+        _playerAS = GetComponent<AudioSource>();
     }
 
 
@@ -71,6 +73,16 @@ public class PlayerController : MonoBehaviour
     private void MovePlayer(Vector2 direction)
     {
         _playerRB.AddForce(direction * playerSpeed);
+
+        // Play foot step audio
+        if ( (_h != 0 || _v != 0) && !_playerAS.isPlaying)
+        {
+            float volume = Random.Range(0.005f, 0.01f);
+            float pitch = Random.Range(0.8f, 1.2f);
+            _playerAS.volume = volume;
+            _playerAS.pitch = pitch;
+            _playerAS.Play();
+        }
         // Flip sprite
         if (_h > 0)
         {
