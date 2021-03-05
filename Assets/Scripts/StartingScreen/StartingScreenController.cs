@@ -35,7 +35,7 @@ public class StartingScreenController : MonoBehaviour
     public void SetHardMode()
     {
         PlayerPrefs.SetInt("playerSpeed", 80);
-        PlayerPrefs.SetInt("ghostSpeed", 6);
+        PlayerPrefs.SetInt("ghostSpeed", 7);
         PlayerPrefs.SetInt("ghostQty", 15);
         PlayerPrefs.SetInt("patientLives", 5);
     }
