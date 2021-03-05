@@ -127,6 +127,8 @@ MonoBehaviour:
   targetName: Patient
   destroyEffect: {fileID: 6877742167065804315, guid: adf9ac0710dde4c8bb2c2820a5e03111,
     type: 3}
+  destroyEffect2: {fileID: 6877742167065804315, guid: 5abcd6d608f1e4e78825fb429e2dcfef,
+    type: 3}
 --- !u!95 &-7149069849706441632
 Animator:
   serializedVersion: 3

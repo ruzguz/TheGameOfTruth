@@ -10,6 +10,7 @@ public class GhostController : MonoBehaviour
     private GameObject _target;
     public string targetName;
     public GameObject destroyEffect;
+    public GameObject destroyEffect2;
 
 
     // Start is called before the first frame update
@@ -30,15 +31,17 @@ public class GhostController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Projectile"))
         {
-            Instantiate(destroyEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            GameObject destroyEffectAux = Instantiate(destroyEffect2, transform.position, Quaternion.identity);
+            destroyEffectAux.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
+            Destroy(gameObject);
             GhostLevelManager.sharedInstance.IncreaseScore();
         }   
 
         if (other.gameObject.CompareTag("Patient")) 
         {
-            Instantiate(destroyEffect, transform.position, Quaternion.identity);
+            GameObject destroyEffectAux = Instantiate(destroyEffect, transform.position, Quaternion.identity);
+            destroyEffectAux.GetComponent<AudioSource>().Play();
             Destroy(gameObject);
         }     
     }

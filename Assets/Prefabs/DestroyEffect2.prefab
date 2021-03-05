@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6877742167065804318}
   - component: {fileID: 6877742167065804317}
   - component: {fileID: 6877742167065804316}
-  - component: {fileID: 5937861430494618579}
+  - component: {fileID: 8209019475309730102}
   m_Layer: 0
-  m_Name: DestroyEffect
+  m_Name: DestroyEffect2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +222,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0, b: 0, a: 1}
+      minColor: {r: 0.13181043, g: 1, b: 0, a: 1}
       maxColor: {r: 0, g: 0, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
@@ -4813,7 +4813,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!82 &5937861430494618579
+--- !u!82 &8209019475309730102
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4823,7 +4823,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 04ac56962b9bf447787fb8679aeee3bb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8b696d357a6fa4c2db4103eaf2d71abc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
